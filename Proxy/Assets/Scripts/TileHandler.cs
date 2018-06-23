@@ -65,12 +65,11 @@ public class TileHandler : NetworkBehaviour {
         return columns[index].Where(x => x.controlledPlayer == -requestingPlayer).ToList();
     }
 
-    [Command]
     public void CmdCheckForAttacks(){
         foreach (var c in columns){
             foreach (var e in c){
                 if (Vector3.SqrMagnitude(e.transform.position - transform.position) < e.attack.range * e.attack.range){
-                    e.attack.RpcAttack(e, e.Type);
+                    e.attack.Attack(e, e.Type);
                     e.SetEngaged(true);
                     return;
                 }

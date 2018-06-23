@@ -43,7 +43,7 @@ public class Unit : NetworkBehaviour{
 	            _timeSinceLastMovement = 0f;
 	            //towers don't move, nor do we move while engaged
 	            if (Type != UnitType.Tower){
-	                movement.MoveForward(controlledPlayer);
+	                movement.MoveForward();
 	            }
 	        }
 	    }
@@ -59,8 +59,7 @@ public class Unit : NetworkBehaviour{
         TileHandler.Instance.CmdCheckForAttacks();
     }
 
-    [Command]
-    public void CmdDie(){
+    public void Die(){
         TileHandler.Instance.CmdRemoveFromColumn(ID, assignedColumn);
         Destroy(gameObject, 1f);
     }

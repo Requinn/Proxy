@@ -10,8 +10,7 @@ public class UnitAttack : NetworkBehaviour {
     public float attackSpeed;
     private bool _canAttack = true;
 
-    [ClientRpc]
-    public void RpcAttack(Unit target, Unit.UnitType sourceType) {
+    public void Attack(Unit target, Unit.UnitType sourceType) {
         if (_canAttack){
             target.health.TakeDamage(damage, sourceType);
             Timing.RunCoroutine(AttackDelay());
