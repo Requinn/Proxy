@@ -2,8 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class Unit : MonoBehaviour{
+public class Unit : NetworkBehaviour{
     public int ID;
     public enum UnitType{
         Infantry,
@@ -30,7 +31,11 @@ public class Unit : MonoBehaviour{
         _isEngaged = b;
     }
 
-	// Update is called once per frame
+    public override void OnStartLocalPlayer(){
+        GetComponent<Renderer>().material.color = Color.blue;
+    }
+
+    // Update is called once per frame
 	void Update (){
 	    _timeSinceLastMovement += Time.deltaTime;
 	    if (!_isEngaged){
@@ -51,13 +56,12 @@ public class Unit : MonoBehaviour{
     /// </summary>
     private void CheckForAttack(){
         _isEngaged = false;
-        List<Unit> enemies = TileHandler.Instance.FetchAllFromColumn(assignedColumn, controlledPlayer);
-        foreach (var e in enemies){
-            if (Vector3.SqrMagnitude(e.transform.position - transform.position) < attack.range * attack.range){
-                attack.Attack(e, Type);
-                _isEngaged = true;
-                return;
-            }
-        }
+        TileHandler.Instance.CmdCheckForAttacks();
+    }
+
+    [Command]
+    public void CmdDie(){
+        TileHandler.Instance.CmdRemoveFromColumn(ID, assignedColumn);
+        Destroy(gameObject, 1f);
     }
 }

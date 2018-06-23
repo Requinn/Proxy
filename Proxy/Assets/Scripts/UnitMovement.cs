@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class UnitMovement : MonoBehaviour {
+public class UnitMovement : NetworkBehaviour {
 
     //move forward
     public void MoveForward(int player){

@@ -2,14 +2,16 @@
 using System.Collections.Generic;
 using MovementEffects;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class UnitAttack : MonoBehaviour{
+public class UnitAttack : NetworkBehaviour {
     public float range = 2f;
     public int damage = 2;
     public float attackSpeed;
-    private bool _canAttack;
+    private bool _canAttack = true;
 
-    public void Attack(Unit target, Unit.UnitType sourceType) {
+    [ClientRpc]
+    public void RpcAttack(Unit target, Unit.UnitType sourceType) {
         if (_canAttack){
             target.health.TakeDamage(damage, sourceType);
             Timing.RunCoroutine(AttackDelay());

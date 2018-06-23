@@ -40,7 +40,7 @@ public class UnitHealth : NetworkBehaviour{
         
         if (currentHealth <= 0){
             currentHealth = 0;
-            
+            _owningUnit.CmdDie();
         }
     }
     void UpdateHealthBar(int hp){
