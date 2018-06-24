@@ -148,6 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightMat: {fileID: 0}
   ID: 0
+  HeldColumn: 0
   owningPlayer: 0
 --- !u!114 &56858610
 MonoBehaviour:
@@ -528,95 +529,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &98843824
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 98843826}
-  - component: {fileID: 98843825}
-  - component: {fileID: 98843827}
-  m_Layer: 5
-  m_Name: TileHandler
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &98843825
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 98843824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f1f42a3528965a438002bee2bc046f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  availableUnits:
-  - {fileID: 0}
-  Tiles: []
-  Column0: []
-  Column1: []
-  Column2: []
-  Column3: []
-  Column4: []
-  Column5: []
---- !u!224 &98843826
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 98843824}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 11, y: 3.5}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &98843827
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 98843824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 0
-    i1: 0
-    i2: 0
-    i3: 0
-    i4: 0
-    i5: 0
-    i6: 0
-    i7: 0
-    i8: 0
-    i9: 0
-    i10: 0
-    i11: 0
-    i12: 0
-    i13: 0
-    i14: 0
-    i15: 0
-  m_ServerOnly: 1
-  m_LocalPlayerAuthority: 0
 --- !u!43 &157801745
 Mesh:
   m_ObjectHideFlags: 0
@@ -798,6 +712,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightMat: {fileID: 0}
   ID: 0
+  HeldColumn: 0
   owningPlayer: 0
 --- !u!114 &214247542
 MonoBehaviour:
@@ -1178,7 +1093,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &341925465
 GameObject:
@@ -1215,6 +1130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightMat: {fileID: 0}
   ID: 0
+  HeldColumn: 0
   owningPlayer: 0
 --- !u!114 &341925467
 MonoBehaviour:
@@ -1595,7 +1511,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &342986194
 Mesh:
@@ -1803,7 +1719,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &434869544
 GameObject:
@@ -1840,6 +1756,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightMat: {fileID: 0}
   ID: 0
+  HeldColumn: 0
   owningPlayer: 0
 --- !u!114 &434869546
 MonoBehaviour:
@@ -2220,7 +2137,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &468814179
 GameObject:
@@ -2257,6 +2174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightMat: {fileID: 0}
   ID: 0
+  HeldColumn: 0
   owningPlayer: 0
 --- !u!114 &468814181
 MonoBehaviour:
@@ -2637,7 +2555,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &550599916
 Mesh:
@@ -2820,6 +2738,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightMat: {fileID: 0}
   ID: 0
+  HeldColumn: 0
   owningPlayer: 0
 --- !u!114 &560750003
 MonoBehaviour:
@@ -3200,7 +3119,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &561686092
 Mesh:
@@ -3529,6 +3448,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightMat: {fileID: 0}
   ID: 0
+  HeldColumn: 0
   owningPlayer: 0
 --- !u!114 &592576295
 MonoBehaviour:
@@ -3909,7 +3829,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &696553253
 GameObject:
@@ -3949,7 +3869,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &761360954
 GameObject:
@@ -4179,6 +4099,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightMat: {fileID: 0}
   ID: 0
+  HeldColumn: 0
   owningPlayer: 0
 --- !u!114 &792387789
 MonoBehaviour:
@@ -4559,7 +4480,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1043305083
 GameObject:
@@ -4596,6 +4517,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightMat: {fileID: 0}
   ID: 0
+  HeldColumn: 0
   owningPlayer: 0
 --- !u!114 &1043305085
 MonoBehaviour:
@@ -4976,7 +4898,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1211884300
 GameObject:
@@ -5013,6 +4935,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightMat: {fileID: 0}
   ID: 0
+  HeldColumn: 0
   owningPlayer: 0
 --- !u!114 &1211884302
 MonoBehaviour:
@@ -5393,7 +5316,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1232632814
 GameObject:
@@ -5433,7 +5356,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &1267892429
 Mesh:
@@ -6054,6 +5977,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightMat: {fileID: 0}
   ID: 0
+  HeldColumn: 0
   owningPlayer: 0
 --- !u!114 &1374081946
 MonoBehaviour:
@@ -6434,7 +6358,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1401438612
 GameObject:
@@ -6471,6 +6395,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightMat: {fileID: 0}
   ID: 0
+  HeldColumn: 0
   owningPlayer: 0
 --- !u!114 &1401438614
 MonoBehaviour:
@@ -6851,7 +6776,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &1454172946
 Mesh:
@@ -7180,6 +7105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightMat: {fileID: 0}
   ID: 0
+  HeldColumn: 0
   owningPlayer: 0
 --- !u!114 &1620293461
 MonoBehaviour:
@@ -7560,7 +7486,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1630477694
 GameObject:
@@ -7597,6 +7523,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightMat: {fileID: 0}
   ID: 0
+  HeldColumn: 0
   owningPlayer: 0
 --- !u!114 &1630477696
 MonoBehaviour:
@@ -7977,7 +7904,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1658976724
 GameObject:
@@ -8014,6 +7941,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightMat: {fileID: 0}
   ID: 0
+  HeldColumn: 0
   owningPlayer: 0
 --- !u!114 &1658976726
 MonoBehaviour:
@@ -8394,7 +8322,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &1675228435
 Mesh:
@@ -8964,6 +8892,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightMat: {fileID: 0}
   ID: 0
+  HeldColumn: 0
   owningPlayer: 0
 --- !u!114 &1690271851
 MonoBehaviour:
@@ -9344,7 +9273,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &1700223102
 Mesh:
@@ -9527,6 +9456,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightMat: {fileID: 0}
   ID: 0
+  HeldColumn: 0
   owningPlayer: 0
 --- !u!114 &1812229197
 MonoBehaviour:
@@ -9907,7 +9837,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &1926261078
 Mesh:
@@ -10528,6 +10458,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightMat: {fileID: 0}
   ID: 0
+  HeldColumn: 0
   owningPlayer: 0
 --- !u!114 &2087510936
 MonoBehaviour:
@@ -10908,7 +10839,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2089621664
 GameObject:

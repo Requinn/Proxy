@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4843496958214810}
   - component: {fileID: 114461262336731604}
   - component: {fileID: 114636477813645190}
+  - component: {fileID: 114652474033350682}
   m_Layer: 0
   m_Name: PlayerObj
   m_TagString: Untagged
@@ -1785,6 +1786,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightMat: {fileID: 0}
   ID: 0
+  HeldColumn: 0
   owningPlayer: 0
 --- !u!114 &114002959603146962
 MonoBehaviour:
@@ -2141,6 +2143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightMat: {fileID: 0}
   ID: 0
+  HeldColumn: 0
   owningPlayer: 0
 --- !u!114 &114083262918832774
 MonoBehaviour:
@@ -2167,6 +2170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightMat: {fileID: 0}
   ID: 0
+  HeldColumn: 0
   owningPlayer: 0
 --- !u!114 &114123733736944904
 MonoBehaviour:
@@ -2505,6 +2509,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightMat: {fileID: 0}
   ID: 0
+  HeldColumn: 0
   owningPlayer: 0
 --- !u!114 &114198094517894794
 MonoBehaviour:
@@ -3181,6 +3186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightMat: {fileID: 0}
   ID: 0
+  HeldColumn: 0
   owningPlayer: 0
 --- !u!114 &114366201963919172
 MonoBehaviour:
@@ -3207,6 +3213,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightMat: {fileID: 0}
   ID: 0
+  HeldColumn: 0
   owningPlayer: 0
 --- !u!114 &114371723248862848
 MonoBehaviour:
@@ -3221,6 +3228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightMat: {fileID: 0}
   ID: 0
+  HeldColumn: 0
   owningPlayer: 0
 --- !u!114 &114382977086396184
 MonoBehaviour:
@@ -3521,6 +3529,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightMat: {fileID: 0}
   ID: 0
+  HeldColumn: 0
   owningPlayer: 0
 --- !u!114 &114419348559665046
 MonoBehaviour:
@@ -3559,6 +3568,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightMat: {fileID: 0}
   ID: 0
+  HeldColumn: 0
   owningPlayer: 0
 --- !u!114 &114440375142902444
 MonoBehaviour:
@@ -3573,6 +3583,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightMat: {fileID: 0}
   ID: 0
+  HeldColumn: 0
   owningPlayer: 0
 --- !u!114 &114452990460641584
 MonoBehaviour:
@@ -3599,6 +3610,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightMat: {fileID: 0}
   ID: 0
+  HeldColumn: 0
   owningPlayer: 0
 --- !u!114 &114456394702356358
 MonoBehaviour:
@@ -3613,6 +3625,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightMat: {fileID: 0}
   ID: 0
+  HeldColumn: 0
   owningPlayer: 0
 --- !u!114 &114461262336731604
 MonoBehaviour:
@@ -3971,6 +3984,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightMat: {fileID: 0}
   ID: 0
+  HeldColumn: 0
   owningPlayer: 0
 --- !u!114 &114528995878913976
 MonoBehaviour:
@@ -4557,6 +4571,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightMat: {fileID: 0}
   ID: 0
+  HeldColumn: 0
   owningPlayer: 0
 --- !u!114 &114573568777081174
 MonoBehaviour:
@@ -5223,6 +5238,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightMat: {fileID: 0}
   ID: 0
+  HeldColumn: 0
   owningPlayer: 0
 --- !u!114 &114629355198461856
 MonoBehaviour:
@@ -6712,6 +6728,32 @@ MonoBehaviour:
   m_selectedFaces: 
   m_SelectedEdges: []
   m_selectedTriangles: 
+--- !u!114 &114652474033350682
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1059177850000422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f1f42a3528965a438002bee2bc046f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  availableUnits:
+  - {fileID: 114995054763796322, guid: 7bc35b9d09be8c549bf5f2ace9a66502, type: 2}
+  Tiles: []
+  Column10: []
+  Column11: []
+  Column12: []
+  Column13: []
+  Column14: []
+  Column15: []
+  Column20: []
+  Column21: []
+  Column22: []
+  Column23: []
+  Column24: []
+  Column25: []
 --- !u!114 &114657702750616928
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7023,6 +7065,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightMat: {fileID: 0}
   ID: 0
+  HeldColumn: 0
   owningPlayer: 0
 --- !u!114 &114685709651462240
 MonoBehaviour:
@@ -7687,6 +7730,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightMat: {fileID: 0}
   ID: 0
+  HeldColumn: 0
   owningPlayer: 0
 --- !u!114 &114985303803696538
 MonoBehaviour:
@@ -7701,6 +7745,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightMat: {fileID: 0}
   ID: 0
+  HeldColumn: 0
   owningPlayer: 0
 --- !u!124 &124346266083144622
 Behaviour:

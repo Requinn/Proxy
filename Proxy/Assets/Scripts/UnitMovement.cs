@@ -7,6 +7,6 @@ public class UnitMovement : NetworkBehaviour {
 
     //move forward
     public void MoveForward(){
-        transform.position += Vector3.forward;
+        transform.position += transform.forward;
     }
 }
