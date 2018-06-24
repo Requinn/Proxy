@@ -10,7 +10,7 @@ public class TileHandler : NetworkBehaviour {
 
     public List<Unit> availableUnits = new List<Unit>();
     public List<GameObject> Tiles;
-    private readonly List<List<Unit>> P1columns = new List<List<Unit>>();
+    private readonly List<List<Unit>> columns = new List<List<Unit>>();
     public List<Unit> Column10 = new List<Unit>();//leftmost
     public List<Unit> Column11 = new List<Unit>();
     public List<Unit> Column12 = new List<Unit>();
@@ -18,37 +18,22 @@ public class TileHandler : NetworkBehaviour {
     public List<Unit> Column14 = new List<Unit>();
     public List<Unit> Column15 = new List<Unit>();//rightmost
 
-    private readonly List<List<Unit>> P2columns = new List<List<Unit>>();
-    public List<Unit> Column20 = new List<Unit>();//leftmost
-    public List<Unit> Column21 = new List<Unit>();
-    public List<Unit> Column22 = new List<Unit>();
-    public List<Unit> Column23 = new List<Unit>();
-    public List<Unit> Column24 = new List<Unit>();
-    public List<Unit> Column25 = new List<Unit>();//rightmost
-
     void Start(){
         Instance = this;
 
-        P1columns.Add(Column10);
-        P1columns.Add(Column11);
-        P1columns.Add(Column12);
-        P1columns.Add(Column13);
-        P1columns.Add(Column14);
-        P1columns.Add(Column15);
-
-        P2columns.Add(Column20);
-        P2columns.Add(Column21);
-        P2columns.Add(Column22);
-        P2columns.Add(Column23);
-        P2columns.Add(Column24);
-        P2columns.Add(Column25);
+        columns.Add(Column10);
+        columns.Add(Column11);
+        columns.Add(Column12);
+        columns.Add(Column13);
+        columns.Add(Column14);
+        columns.Add(Column15);
     }
 
     [Command]
     public void CmdCreateAndAddToColumn(int column, Unit.UnitType type, Vector3 pos, Quaternion rot){
         GameObject go = Instantiate(availableUnits.Single(u => u.Type == type).gameObject, pos, rot);
         NetworkServer.Spawn(go);
-        P1columns.ElementAt(column).Add(go.GetComponent<Unit>());
+        columns.ElementAt(column).Add(go.GetComponent<Unit>());
     }
 
     /// <summary>
@@ -57,7 +42,7 @@ public class TileHandler : NetworkBehaviour {
     /// <param name="go"></param>
     /// <param name="column"></param>
     public void AddToColumn(Unit go, int column){
-        P1columns[column].Add(go);
+        columns[column].Add(go);
     }
 
     /// <summary>
@@ -67,7 +52,9 @@ public class TileHandler : NetworkBehaviour {
     /// <param name="column"></param>
     [Command]
     public void CmdRemoveFromColumn(int ID, int column){
-        P1columns[column].Remove(P1columns[column].Single(x => x.ID == ID));
+        Unit go = columns[column].Single(x => x.ID == ID);
+        columns[column].Remove(go);
+        NetworkServer.Destroy(go.gameObject);
     }
 
     /// <summary>
@@ -77,11 +64,11 @@ public class TileHandler : NetworkBehaviour {
     /// <param name="requestingPlayer"></param>
     /// <returns></returns>
     public List<Unit> FetchAllEnemiesFromColumn(int index, int requestingPlayer){
-        return P1columns[index].Where(x => x.controlledPlayer == -requestingPlayer).ToList();
+        return columns[index].Where(x => x.controlledPlayer == -requestingPlayer).ToList();
     }
 
     public void CmdCheckForAttacks(){
-        foreach (var c in P1columns) {
+        foreach (var c in columns) {
             foreach (var e in c){
                 if (Vector3.SqrMagnitude(e.transform.position - transform.position) < e.attack.range * e.attack.range){
                     e.attack.Attack(e, e.Type);
